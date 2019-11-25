@@ -1,0 +1,53 @@
+section
+
+  section
+    h2 Структура
+    +arr
+
+  section
+    h3 Файловaя структура
+    pre: code.
+      // Файлы вложены  
+      index.pug
+        settings.pug 
+        presentation.pug
+          intro.pug
+          section_01.pug
+          ...
+          section_##.pug
+          epilogue.pug
+
+  section
+    h3 index.pug
+    p В этом файле собран базовый шаблон reveal.js    
+
+  section
+    h3 settings.pug
+    p В этом файле собраны повторяющиеся элементы    
+  
+  section
+    h3 presentation.pug
+    p В этом файле собраны секции используемые в презентации
+
+  section
+    h3 Структура простой секции
+    pre: code.
+      // section_##.pug
+      section
+        h2 Заголовок секции
+        p Содержание секции
+        ul
+          li список #1
+          li список #2
+          li список #3
+
+  section
+    h3 Структура сложной секции
+    pre: code.
+      // section_##.pug
+      section
+        section
+          h2 Заголовок секции
+        section
+          h3 Подзаголовок страницы секции
+          p Содержание страницы секции
