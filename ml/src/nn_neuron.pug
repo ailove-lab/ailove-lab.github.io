@@ -1,0 +1,83 @@
+section
+  h2 Нейрон
+
+section
+  h3 1943 год
+  img(src="img/nn_uorren.png")
+  br
+  small
+    | Мат-модель нейронной связи была предложена <b>75 лет</b> назад <br>Уорреном Мак-Каллоком
+
+section
+  h3 Модель нейрона
+  img(src="img/nn_neuron.png")
+  small.
+    \begin{align*}
+    \large y &= f(\vec x \cdot \vec w) \\
+    \large   &= f(w_0 + x_1 w_1 + x_2 w_2 + \dots +x_n w_n) 
+    \end{align*}
+
+
+section
+  h3 параметры
+  ul
+    li <a>$\vec{x}= x_1 \dots x_n$</a> - входные данные
+    li <a>$x_0$          </a> - по соглашению всегда равен $1$
+    li <a>$\vec{w}= w_0 \dots w_n$</a> - веса, которые необходимо найти
+    li <a>$w_0$          </a> - свободный вес, смещение (bias)
+    li <a>$y$            </a> - выход
+    li <a>$f$            </a> - функция активации
+
+  
+section
+  h3 нейрон с одним входом
+
+  img(src='img/nn_linear.png')
+
+  small
+    p $$y = f(w_0 + w_1 x_1)$$
+    p
+      | В случае если на входе модели только одна переменная $x$, мы получаем простейшую линейную модель.
+      | Этого уже достаточно, чтобы аппроксимировать некое линейное распределение данных.
+
+section
+  h3 подбор параметров $w_0,w_1$
+  a(href='https://www.desmos.com/calculator/jwquvmikhr')
+    img(src="img/nn_linear.gif")
+
+  
+section
+  h3 нейрон с двумя входами
+
+  img(src='img/nn_planar.png')
+
+  small
+    p $$y = f(w_0 + w_1 x_1 + w_2 x_2)$$
+    p Если на входе две переменные $x$, мы получаем уже уравнение плоскости
+
+section
+  h3 Аппроксимация плоскостью
+  img.stretch(src='img/nn_planar_graph.png')
+  small 
+    p Входные данные: $x_1$ - осадки, $x_2$ - температура
+    p Выходные: $y$ - урожай яблок
+
+//section(data-background-iframe="https://ailove-lab.github.io/hyper/07.html")
+section
+  h3 с тремя входами и выше
+
+  img(src='img/nn_neuron_model.png')
+  small
+    p $$ y = f(w_0 + x_1 w_1 + x_2 w_2 + \dots +x_n w_n)$$
+    p.
+      Mы по прежнему получаем линейное уравнения, гиперплоскости, представить и
+      изобразить которых довольно <a href='https://ailove-lab.github.io/hyper/07.html'>сложно</a>, т.к. мы существа трехмерные
+
+section
+
+  h2 Всё вокруг кривое
+  blockquote.
+    На свете нет ничего одинакового. Все распределяется по гауссиане. Этот старый дурак не сообразил, что существует дисперсия свойств…
+  small.
+    A. и Б. Стругацкие, "Понедельник начинается в субботу"
+  // img.plain.small(src="img/pushen_philosophy.png")

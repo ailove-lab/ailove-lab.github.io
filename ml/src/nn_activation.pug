@@ -1,0 +1,54 @@
+section
+  h2 Функции Активации
+
+section
+  img.plain.small(src='img/pushen_magick.png')
+  h2 <div><span style="color:#ff8080;">В</span><span style="color:#ff9580;">Ж</span><span style="color:#ffaa80;">У</span><span style="color:#ffbf80;">Х</span><span style="color:#ffea80;"> </span><span style="color:#ffff80;">И</span><span style="color:#d5ff80;"> </span><span style="color:#aaff80;">В</span><span style="color:#80ff80;">С</span><span style="color:#80ffc0;">Ё</span><span style="color:#80ffff;"> </span><span style="color:#80d5ff;">К</span><span style="color:#80aaff;">Р</span><span style="color:#8080ff;">И</span><span style="color:#9780ff;">В</span><span style="color:#af80ff;">О</span><span style="color:#c680ff;">Е</span></div>
+
+section
+  h3 Что о них достаточно знать
+  ul
+    +li они находятся на выходе нейрона
+    +li с ними нейронные сети могут работать с нелинейными данными
+    +li их очень много разных, но самые популярные:
+      ul
+        +li <a>Relu    </a> - для скрытых слоев
+        +li <a>Sigmoid </a> - для бинарной классификации
+        +li <a>Softmax </a> - для классификации
+        +li <a>Linear  </a> - для регрессии
+
+section
+  h3 Relu
+  p $$y=max(0,x)$$
+
+  img(src='img/nn_relu.png')
+  br
+  small.
+    Данная функция отсекает все отрицательные значения на выходе нейрона.
+    Используется во внутренних слоях.
+
+section
+  h3 Sigmoid
+  | $$ y = \frac{1}{1+e^{-x}}$$
+  img.stretch(src='img/nn_sigmoid.png')
+  br
+  small Используется при бинарной классификации
+    
+section
+  h3 Linear
+  | $$y = x$$
+  img.stretch(src='img/nn_linear_act.png')
+  br
+  small Дает обычную линейную регрессию
+
+section
+  h3 Softmax
+  | $$y_i = \frac{e^{x_i}}{\sum_j e^{x_j}}$$
+  img.stretch(src='img/nn_softmax_act.png')
+  small Когда классов больше двух, данная функция дает итоговую вероятность каждого класса
+
+
+section
+  h3 Джунгли Активации
+  img.stretch(src='img/nn_activation_zoo.png')
+  small Функций активации напридумывали массу, но активно используется только несколько

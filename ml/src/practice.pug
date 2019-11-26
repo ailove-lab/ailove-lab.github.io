@@ -1,0 +1,256 @@
+section
+  h2 Время практики
+  +arr
+
+
+section
+  h2 Модель нейрона
+    
+section
+  h3 numpy
+  img(src="img/py_neuron.png")
+  +py.
+    import numpy as np
+    x = np.array([1,2,3])
+    w = np.array([4,5,6])
+    y = x @ w 
+    print(f"на входе нейрона {x}, веса {w}, результат: {y}")
+  pre.
+    на входе нейрона: [1 2 3], веса: [4 5 6], результат: 32
+
+section
+  img(src="img/py_neuron_X.png")
+  +py.
+    import numpy as np
+    x = np.array([[1,2,3],[1,4,6],[3,2,1]])
+    w = np.array([4,5,6])
+    y = x @ w
+    print(f"на входе нейрона\n {x}, веса {w},\nрезультат: {y}")
+  pre.
+    на входе нейрона: 
+    [[1 2 3]
+     [1 4 6]
+     [3 2 1]],
+    веса: [4 5 6],
+    результат: [32 60 28]
+
+section
+  img(src="img/py_neuron_n3.png")
+  +py.
+    x = np.array([[1,2,3],[1,4,6],[3,2,1]])
+    w = np.array([[4,5,6],[2,4,5],[4,5,5]])
+    y = x @ w
+  pre.
+    результат:
+    [[20 28 31]
+     [36 51 56]
+     [20 28 33]]
+    
+section
+  img(src="img/py_neuron_l2.png")
+  +py.
+    x  = np.array([[1,2,3],[1,4,6],[3,2,1]])
+    w1 = np.array([[4,5,6],[2,4,5],[4,5,5]])
+    w2 = np.array([[1,1,2],[3,5,2],[4,4,5]])
+    y  = x @ w1 @ w2
+  pre.
+    результат:
+    [[228 284 251]
+     [413 515 454]
+     [236 292 261]]
+
+section
+  h3 pytorch
+  +py.
+    import torch
+    x = torch.Tensor([[1,2,3]])
+    w = torch.Tensor([[3],[4],[5]])
+    y = x @ w
+    print(y)
+  pre.
+    tensor([[32.]])
+  small Все тоже самое
+
+section
+  h3 Тensorflow
+  +py.
+    import tensorflow as tf
+    graph = tf.Graph()
+
+    with graph.as_default():
+      x = tf.constant(np.array([[1, 2, 3]]), dtype=tf.float32)
+      w = tf.constant(np.array([[4],[5],[6]]), dtype=tf.float32)
+      y = tf.matmul(x, w)
+
+    with tf.Session(graph=graph) as session:
+        print(session.run(y))
+  pre.
+    [[32.]]
+       
+  small.
+    Немного посложнее, т.к. tensorflow символьный фреймворк.
+    Нам необходимо сперва построить граф вычислений и скомпилировать его.
+
+section
+  h3 sympy
+  +py.
+    from sympy import *
+
+    x = MatrixSymbol('x',1,3)
+    w = MatrixSymbol('y',3,1)
+    y = x*w
+    pprint(Matrix(y))
+  small
+    p $y = x_{00} y_{00} + x_{01} y_{10} + x_{02} y_{20}$
+    p Получим ответ в символьной форме, формулу.
+
+
+
+section
+  h3 простейший классификатор
+
+section
+  h3 Данные
+  +py.
+    # Входные данные
+    X = np.array([
+        [-2, 4, -1],
+        [ 4, 1, -1],
+        [ 1, 6, -1],
+        [ 2, 4, -1],
+        [ 6, 2, -1],
+    ])
+    # Классы
+    Y = np.array([-1,-1,1,1,1])
+
+section
+  h3 Градиентный спуск
+  +py.
+    # Обучение методом градиентного спуска
+    def gd(X, Y):
+        w = np.zeros(len(X[0]))
+        eta = 1
+        epochs = 20
+        for t in range(epochs):
+            for i, x in enumerate(X):
+                if (np.dot(X[i], w)*Y[i]) <= 0:
+                    w = w + eta*X[i]*Y[i]
+        return w
+
+section
+  h3 Обучение
+  +py.
+    # Запускаем обучение
+    w = gd(X,Y)
+    # Хоба, получили веса нашей мат-модели
+    print(f"w = {w}")
+  pre.
+    w = [ 2.  3. 13.]
+
+  small Уравнение плоскости $y = 13.0 + 2.0 x_1 + 3.0 x_2$
+  br
+  img(src="img/py_firstclassifier.png")
+
+section
+  h3 ВЖУХ
+  h3 И ты уже дата-саентист!
+  img(src="img/pusheen_hat.gif")
+
+section
+  h3 scikit
+  +p.
+    Собственные классификаторы пишут только студенты для курсовых.
+    Классификация занятого человека выглядит так:
+  +py.fragment.
+    from sklearn import svm
+    classifier = svm.SVC()
+    classifier.fit(X,Y)
+  +p A регрессия?
+  +py.fragment.
+    regressor = svm.SVR()
+    regressor.fit(X,Y)
+      
+section
+  h3 Осталось выбрать алгоритм
+  img(src="img/ml_scikit_map.png")
+
+section
+  h3 Обучение глубоких нейронных сетей
+
+section
+  h3 Классификация грибов
+  img(src="img/kubensis.jpg")
+  
+section
+  h3 Постановка задачи
+  ul
+    +li Вы посмотрели подкаст с <a href="https://youtu.be/6BeTUYAUXbY?t=4100">Полом Стеменсом</a> о нейрогенезе под грибами
+    +li Во время прогулки в лесу нашли целую поляну чего-то похожего на Кубенсис 
+    +li Теперь жизненно важно определить к какому виду относятся найденные грибы
+    +li Кот их есть на отрез отказывается
+
+section
+  h3 Придется обучить нейронку
+  img(src="img/inception_v3.png")
+  ul
+    +li Inception v3, обучение такой сети обходится гуглу в $20 000
+    +li У нас таких денег конечно же нет
+
+section
+  h6 Будем использовать
+  h2 transfer learning
+
+section
+  h6 o повышении обобщения
+  img(src="img/convolution_layers.png")
+
+section
+  h3 Приступим
+    
+  ul
+    +li: a(href="https://archive.ics.uci.edu/ml/datasets/mushroom") Скачиваем датасет грибов
+    +li Ставим tensorflow
+      pre > pip install tensorflow
+    +li Прямо в коробке с ним лежит пример <pre>examples/image_retraining/retrain.py<pre>
+    +li Запускаем
+      pre > python retrain.py --image_dir ~/my_mushrooms_dataset
+    +li Идем заваривать чай
+
+section
+  h3 Пол часа спустя
+  ul
+    +li С умным видом смотрим в логи
+    +li Достаем из коробки
+      pre examples/label_image/label_image.py
+    +li Запускаем
+      pre.
+        > python label_image.py \
+        --graph=/tmp/output_graph.pb --labels=/tmp/output_labels.txt \
+        --input_layer=Placeholder \
+        --output_layer=final_result \
+        --image=$HOME/magic_mushrooms/harvest_4/oooh_this_good_one.jpg
+    +li Ответ:
+      q О да чувак! Это он на 74%
+
+section
+  h3 Что котя, проверим на себе?
+section
+  h3 Котя ты чего?
+  img(src="img/cat.gif")
+    
+section
+  h3 <div><span style="color:#ff8080;">Р</span><span style="color:#ffbf80;">А</span><span style="color:#ffff80;">Б</span><span style="color:#c0ff80;">О</span><span style="color:#80ff80;">Т</span><span style="color:#80ffff;">А</span><span style="color:#8080ff;">Е</span><span style="color:#c680ff;">Т</span></div>
+  h3.fragment Это будет шикарный стартап!
+
+section
+  +p Кстати, вы это заметили?
+  +p Мы даже <a href="https://github.com/tensorflow/hub/blob/master/examples/image_retraining/retrain.py">код</a> не открыли!
+  +p Ну и ладно, главное, что нам понятно, как он работает!
+
+section
+  h3 Итог
+  ul
+    +li Под любую задачу ML есть готовый фреймворк на питоне
+    +li Под простые статистические задачи pandas/scipy
+    +li Под задачи посложнее scikit
+    +li Под нейронки берем tensorflow, pytorch

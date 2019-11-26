@@ -1,0 +1,120 @@
+section
+  h2 ОБУЧЕНИЕ NN
+
+section
+  h3 Обучение NN
+  img(src="img/nn_black_box.png")
+  br
+  | Обучение нейронной сети, заключается в подборе таких параметров модели $W$,
+  | при которых ошибка на выходе будет минимальна
+  
+section
+  h3 Ключевые вопросы
+  ul
+    +li
+      | Как измерить точность?<br>
+      p.fragment
+        a Loss function<br>
+        small функция потерь
+    +li
+      | Как повысить точность?<br>
+      p.fragment
+        a Gradient descent<br>
+        small градиентные спуск
+      p.fragment
+        a Backpropagation<br>
+        small обратное распространение ошибки<br>
+    // li Overfitting<br>
+    //   small переобучение
+
+section
+  h2 Loss function
+  ul
+    +li Результат работы любой мат-модели неточен
+    +li Точность модели рассчитывается с помощью функции потерь
+    +li Задача обучения сводится к минимизации данной функции
+    +li Типов функций несколько, выбор конкретной определяется решаемой задачей
+    +li Функции отличаются скоростью работы и точностью
+
+section(data-markdown): textarea(data-template).
+  ###### Функции потерь для
+  ### Регрессии
+  - Mean Squared Error Loss
+  - Mean Squared Logarithmic Error Loss
+  - Mean Absolute Error Loss
+      
+section(data-markdown): textarea(data-template).
+  ###### Функции потерь для
+  ### Бинарной классификации
+  - Binary Cross-Entropy
+  - Hinge Loss
+  - Squared Hinge Loss
+
+section(data-markdown): textarea(data-template).
+  ###### Функции потерь для
+  ### Мультиклассовой классификации
+  - Multi-Class Cross-Entropy Loss
+  - Sparse Multiclass Cross-Entropy Loss
+  - Kullback Leibler Divergence Loss
+ 
+
+section
+  h3 Gradient descent
+
+section
+  h6 Gradient descent
+  p Градиeнтный спуск, это численный метод поиска минимума целевой функции.
+  ul
+    +li Существует несколько популярных алгоритмов
+    +li Самая популярная стратегия Adam
+    +li Менее популярные АdaGrad, AdaDelta
+    +li Другие стратегии:  sgd, mb-gd, momentum, nag, rmsprop
+
+section
+  h3 СРАВНЕНИЕ АЛГОРИТМОВ СПУСКА
+  img.stretch(src="img/gradient_descent_strategies.gif")
+
+section
+  h3 Backpropagation
+  p Oбратное распространение ошибки - модификация градиентного спуска применительно к нейронным сетям
+  ul
+    +li Смысл алгоритма - спустить наказание за ошибку вниз, обратно по иерархии сети, и наказать всех виновных.
+    +li Внутри состоит из частных производных более чем полностью.
+    +li Поэтому любит когда все активационные функции дифференцируемы.
+
+section
+  h3 Backpropagation
+  img.stretch(src="img/nn_backpropagation.gif")
+
+section
+  h3 Подитог
+  ul
+    +li Нейроны это обычные линейные функции
+    +li Им добавлена функция активации чтобы решать нелинейные задачи
+    +li Собранные в сети, нейроны могут аппроксимировать любые данные
+    +li Обучение - это определение коэффициентов в линейных уравнениях нейронов
+    +li Для обучения используется алгоритм backpropagation
+
+//
+  section(data-markdown): textarea(data-template).
+    ### Доп-Материал
+
+  section(data-markdown): textarea(data-template).
+    #### Loss function
+    - [Объяснение от Siraj'а](https://www.youtube.com/watch?v=IVVVjBSk9N0)
+    - [Лекция, стэндфорд](https://www.youtube.com/watch?v=h7iBpEHGVNc)
+    - [подборка, youtube](https://www.youtube.com/results?search_query=loss+function)
+
+  section(data-markdown): textarea(data-template).
+    #### Gradient descent
+    - [Себястиан Рюдер](http://ruder.io/optimizing-gradient-descent/)
+    - [Siraj](https://www.youtube.com/watch?v=nhqo0u1a6fw)
+
+  section(data-markdown): textarea(data-template).
+    #### Backpropagation
+    - [Siraj](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
+    - [Опять Siraj](https://www.youtube.com/watch?v=FaHHWdsIYQg)
+    - [Математично](https://www.youtube.com/watch?v=IHZwWFHWa-w)
+    - [на русском](https://www.youtube.com/watch?v=HA-F6cZPvrg)
+
+

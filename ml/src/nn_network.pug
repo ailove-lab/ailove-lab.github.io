@@ -1,0 +1,55 @@
+section
+  h2 НЕЙРОННАЯ СЕТЬ
+
+section
+  h6 Если один нейрон способен аппроксимировать данные гиперплоскостью
+  h3.fragment Что же могут два или три?
+
+section
+  h3 берём два нейрона
+  img(src='img/two_neurons.png')
+
+//
+  section
+    h6.fragment Хотя, зачем мелочится
+    h3.fragment Берем сто тысяч нейронов
+    h6.fragment И укладываем их штабелями друг на друга
+
+section
+  h3 Как-то так
+  img.stretch(src='img/perceptron.png')
+
+section
+  h3 Зачем?
+  ul
+    li.fragment Приблизительно так устроен живой мозг
+    li.fragment Чем больше нейронов, тем модель "умнее" <br/>(но это не точно)
+
+section
+  h3 Пример с яблоком
+  img.stretch(src='img/apple_0.jpg')
+  small Представьте, что ваши данные это яблоко, а Нож - классификатор, который может разрезать яблоко на две части
+
+section
+  h3 Один нейрон
+  img.stretch(src='img/apple_1.jpg')
+  small Один нейрон позволяет разрезать яблоко-данные на две части
+
+section
+  h3 Два нейрона
+  img.stretch(src='img/apple_2.jpg')
+  small Два нейрона позволяет разрезать яблоко на три части
+
+section
+  h3 Три нейрона
+  img.stretch(src='img/apple_3.jpg')
+  small Три нейрона позволяют нам  вырезать из яблока сердцевину целиком
+      
+section
+  h3 100500 нейронов
+  img.stretch(src='img/apple_4.jpg')
+  br
+  small способны аппроксимировать что угодно
+
+section: h3 Живой пример
+section(data-background-iframe="playground")

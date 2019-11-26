@@ -1,0 +1,88 @@
+section
+
+  section
+    h2 Технологии
+    ul
+      +li ffmpeg
+      +li blender
+      +li after effects
+      +li cef
+      +li cairo, skia, opengl
+  
+  section
+    h3 ffmpeg
+    img(src="img/ffmpeg.gif")
+    pre: code > ffmpeg -i input.avi output.mp4
+  section(data-background-image="img/ffmpeg.gif" data-background-opacity=0.1)
+    h3 ffmpeg / pros
+    ul
+      +li швейцарский нож для работы с видео на низком уровне
+      +li отлично решает задачи конвертации форматов
+      +li позволяет решать задачи простого компоузинга
+  section(data-background-image="img/ffmpeg.gif" data-background-opacity=0.1)
+    h3 ffmpeg / cons
+    ul
+      +li Не подходит для генеративных задач сложнее слайдшоу
+      +li Документация сложна в освоении
+
+  section
+    h3 blender
+    img(src="img/blender.jpg")
+  section(data-background-image="img/blender.jpg" data-background-opacity=0.1)
+    h3 blender / pros
+    ul
+      +li открытый и бесплатный
+      +li полносценный 3D пакет, с хорошим GPU ускорением
+      +li содержит инструменты для нелинейного видео монтажа
+      +li полностью автоматизируется на питоне
+  section(data-background-image="img/blender.jpg" data-background-opacity=0.1)
+    h3 blender / cons
+    ul
+      +li тяжело найти аниматоров
+  section: video.stretch(data-autoplay src="img/blender_01.mp4")
+  section: video.stretch(data-autoplay src="img/blender_02.mp4")
+  section: video.stretch(data-autoplay src="img/blender_03.mp4")
+  section: video.stretch(data-autoplay src="img/blender_04.mp4")
+
+
+  section
+    h3 adobe after effects
+    img(src="img/ae.jpg")
+  section(data-background-image="img/ae.jpg" data-background-opacity=0.1)
+    h3 adobe after effects / pros
+    ul
+      +li Один из основных инструментов видео-продакшена
+      +li Отличное качество рендера
+      +li Огромное ко-во стоковых темплейтов
+      +li Легко найти аниматора
+  section(data-background-image="img/ae.jpg" data-background-opacity=0.1)
+    h3 adobe after effects / cons
+    ul
+      +li платный
+      +li Тяжелее подается автоматизации
+      +li Скорость сильо зависит от "красоты" темплейта 
+      +li Windows
+  
+  section
+    h3 cef
+    img(src="img/cef.png")
+  section(data-background-image="img/cef.png" data-background-opacity=0.1)
+    h3 cef / pros
+    ul
+      +li позволяет создавать видео из обычной web-анимации
+      +li достаточно быстрo работает, близко к реалтайму
+  section(data-background-image="img/cef.png" data-background-opacity=0.1)
+    h3 cef / cons
+    ul
+      +li качество уступает blender / ae
+  section: video.stretch(data-autoplay src="img/cef_01.mp4")
+  section: video.stretch(data-autoplay src="img/cef_02.mp4")
+  section: video.stretch(data-autoplay src="img/cef_03.mp4")
+  section: video.stretch(data-autoplay src="img/cef_04.mp4")
+  
+  section
+    h3 cairo, skia, opengl
+    ul
+      +li Низкоуровневые библиотеки для работы с графикой
+      +li Позволяют генеррировать видео контент на очень высокой скорости
+  section: video.stretch(data-autoplay src="img/skia.mp4")
