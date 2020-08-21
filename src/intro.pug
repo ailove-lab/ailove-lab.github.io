@@ -1,38 +1,25 @@
+// section(data-background-video="img/lab.mp4" data-background-video-loop data-background-size='contain')
 section
+  video(src="img/lab.mp4" autoplay loop)
   h1 #{title}
   h4 #{subtitle}
   p: a(href="https://"+main_url) #{main_url}
-  p 
-
+  // p 
     a(href="/ml") ml
     |&nbsp;|&nbsp;
     a(href="/nlp") nlp
     |&nbsp;|&nbsp;
     a(href="/gc") gc
-    
-  +note.
-    Не забыть сказать про мотивацию
-
 
 section
+  video(src='img/magic.mp4' autoplay loop)
   blockquote.
     Любая достаточно развитая технология неотличима от магии.
   small 3`й закон Кларка
 
-
 section
-  h2 Направления R&D
+  h2 Основные направления
   ul
-    +li Контент
-    // +li Данные & аналитика
-    +li Машинное обучение
-
-
-section
-  h2 Коротко
-  ul
-    +li Мы реализовали десятки интерактивных проектов со сложной визуализацией
-    +li У нас хорошая экспертиза в области графики и звука
-    // +li В том числе создавали аппаратные решения / инсталляции
-    +li Во многих проектах используем машинное обучение / зрение
-    +li Умеем работать с большими данными, масштабироваться
+    +li Генеративный и интеактивный контент
+    +li Обработка данных и машинное обучение
+    +li Автоматизация внутренних процессов
