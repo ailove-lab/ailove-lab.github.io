@@ -1,6 +1,7 @@
 section
   h2 Новости
   +arr
+
 section(data-markdown)
   textarea(data-template).
 
@@ -9,50 +10,59 @@ section(data-markdown)
     - [aiweekly](http://aiweekly.co/)
     - [medium](https://medium.com/search?q=%20neural%20network)
 
+section 
+  h3 TL; DR
+  ul
+    +li Остается очень мало способностей в которых ИИ не превзошел бы человека
+    +li В способностях по распознавании образов, речи, извлечения смысла из текстов - порог пройден
+    +li В умении синтезировать новую информацию, осталось сделать один небольшой шаг
+    +li ИИ недоступны пока абстрактные концепции, тонкие взаимосвязи
+    +li Основная преграда развития - недостаток вычислительных мощностей
 
 section
-  h3 Прорыв в NLP
-  ul
-    +li: a(href='https://habr.com/ru/post/436878/') Bert (Google)
-    +li: a(href='https://habr.com/ru/post/440564/') GPT 2 (Open AI)
-    +li: a(href='https://habr.com/ru/company/ods/blog/458928/') XLNet (CMU)
-    +li: a(href='https://medium.com/syncedreview/baidus-ernie-2-0-beats-bert-and-xlnet-on-nlp-benchmarks-51a8c21aa433') Ernie 2 (Baidu)
-    
-section
-  a(href='https://rossaprimavera.ru/article/729591e2').
-    AlphaZero, после двух часов самостоятельного обучения игре в
-    шахматы (без баз партий), смогла обыграть Stockfish_v8 со счетом 155:6
-    (839 ничьих)
+  section Железо
 
 section
   a(href='https://www.the-scientist.com/news-opinion/ai-object-recognition-system-operates-at-speed-of-light--64569').
     ИИ работающий со скоростью света, использование 3D печати для
-    изготoвления оптических систем распознавания
+    изготовления оптических систем распознавания
 
 section
   a(href='https://www.extremetech.com/extreme/275643-stanford-researchers-build-ai-directly-into-camera-optics').
-    Стендфордские исследователи реализовали систему
+    Стэндфордские исследователи реализовали систему
     распознавания непосредственно в оптическом канале камеры
 
 section
-  a(href='https://neurosciencenews.com/brain-reading-neuroimaging-7794/').
-    Чтение мыслей. Использование искусственных нейронных сетей
-    для перевода энцефалoграмм
+  a(href='https://www.extremetech.com/extreme/291954-intels-silicon-photonics-work-could-supercharge-ai-neural-networks').
+    Разработки Intel в области оптических нейронных сетей, смогут их значительно их ускорить    
 
 section
-  a(href='https://techcrunch.com/2017/12/13/china-cctv-bbc-reporter/').
-    7 минут, столько потребовалось китайской системе безопасности,
-    чтобы найти человека в городе
+  h3 NLP
+  ul
+    +li: a(href='https://tjournal.ru/tech/195331-neyroset-gpt-3-ot-openai-pishet-stihi-muzyku-i-kod-pochemu-ona-poka-daleka-ot-nastoyashchego-ii-no-sposobna-pomenyat-mir') GPT-3 (Open AI)
+    +li: a(href='https://habr.com/ru/post/436878/') Bert (Google)
+    +li: a(href='https://habr.com/ru/company/ods/blog/458928/') XLNet (CMU)
+    +li: a(href='https://medium.com/syncedreview/baidus-ernie-2-0-beats-bert-and-xlnet-on-nlp-benchmarks-51a8c21aa433') Ernie 2 (Baidu)
+    
+section
+  h4 GPT-3
+  ul 
+    +li Самая большая языковая модель, 700Gb
+    +li Генерирует тексты, стихи, музыку, пишет код, верстает сайты, рисует дизайн
+    +li Люди уже не могут понять, что перед ними искусственный контент
+    +li. 
+      У модели есть проблемы 
+        a(href="https://techxplore.com/news/2020-09-artificial-intelligence-gpt-human-dont.html") со внутренней логикой повествования
+      , она "чуть лучше чем случайна" 
+    +li Доступ к модели сильно ограничен
+
 
 section
-  a(href='https://www.telegraph.co.uk/news/2018/04/12/facial-recognition-used-catch-fugitive-among-60000-concert-goers/').
-    Полиция Китая начала применять системы faceid, для задержания
-    прeступников на массовых мероприятиях
+  h3 Медицина
 
 section
-  a(href='https://www.sciencealert.com/google-is-improving-its-artificial-intelligence-with-artificial-intelligence').
-    Гугл и фейсбук разрабатывают нейронные сети для разработки
-    и обучения других нейронных сетей
+  a(href="https://www.extremetech.com/extreme/291339-mit-uses-ai-to-predict-breast-cancer-up-to-5-years-in-advance").
+    Исследователи MIT научились предсказывать рак груди за 5 лет. 
 
 section
   a(href='https://arxiv.org/abs/1606.04474').
@@ -64,23 +74,34 @@ section
     Нейронные сети позволили ускорить обработку MRT в 1000 раз
 
 section
-  a(href='https://www.extremetech.com/extreme/271725-mit-neural-network-accelerates-mri-image-processing-by-1000-times').
-    Дата-майнинг выявил скрытые закономерности в развитии музыки
+  a(href='https://www.extremetech.com/computing/174275-google-has-built-a-neural-network-to-identify-100-million-house-numbers-for-streetview').
+    Использование ИИ для диагностики рака
 
 section
-  a(href='http://cur.at/89XC04T?m=web').
-    Гугл разрабатывает платформу для автоматического построения
-    AI - AutoML
+  a(href='https://neurosciencenews.com/brain-reading-neuroimaging-7794/').
+    Чтение мыслей. Использование искусственных нейронных сетей
+    для перевода энцефалoграмм
+
+
+
+
+//- section
+//-   a(href='https://www.extremetech.com/computing/262265-googles-automl-creates-machine-learning-models-without-programming-experience').
+//-     Нейронные сети успешно применяются при изучении дальних
+//-     галактик
+
+//- section
+//-   a(href='https://gizmodo.com/ai-is-getting-pretty-good-at-studying-distant-galaxies-1825513242').
+//-     Нейронная сеть SETI обнаружила множество радиo-вспышек, в
+//-     далекой галактике
+
 
 section
-  a(href='https://www.extremetech.com/computing/262265-googles-automl-creates-machine-learning-models-without-programming-experience').
-    Нейронные сети успешно применяются при изучении дальних
-    галактик
+  h3 Медиа
 
 section
-  a(href='https://gizmodo.com/ai-is-getting-pretty-good-at-studying-distant-galaxies-1825513242').
-    Нейронная сеть SETI обнаружила множество радиo-вспышек, в
-    далекой галактике
+  a(href="https://gizmodo.com/disneys-developed-movie-quality-face-swapping-technolog-1844202003").
+    Дисней доработал технологию замены лиц до кинематографического качества
 
 section
   a(href='https://gizmodo.com/setis-new-neural-network-detects-many-more-fast-radio-b-1828957295').
@@ -89,10 +110,6 @@ section
 section
   a(href='https://gizmodo.com/this-online-ai-tool-takes-your-words-and-turns-them-int-1828413827').
     Нейронная сеть Street View теперь распознает капчи лучше людей
-
-section
-  a(href='https://www.extremetech.com/computing/174275-google-has-built-a-neural-network-to-identify-100-million-house-numbers-for-streetview').
-    Использование ИИ для диагностики рака
 
 section
   a(href='https://www.extremetech.com/extreme/249212-deep-learning-ai-soon-assist-spotting-cancer').
@@ -158,6 +175,20 @@ section
   a(href='https://gizmodo.com/turn-doodles-into-furry-cat-monsters-with-machine-learn-1792629969').
     Нейронная сеть создает новые танцы
 
+
+section
+  h3 Гонка вооружений
+
+section
+  a(href="https://techxplore.com/news/2020-09-future-autonomous-machines-emotion.html").
+    Военные исследуют использование невербальных сигналов/эмоций для формирования доверия
+
+section
+  a(href='https://rossaprimavera.ru/article/729591e2').
+    AlphaZero, после двух часов самостоятельного обучения игре в
+    шахматы (без баз партий), смогла обыграть Stockfish_v8 со счетом 155:6
+    (839 ничьих)
+
 section
   a(href='https://www.extremetech.com/extreme/262828-people-using-neural-network-app-create-fake-celebrity-porn').
     Пентагон разрабатывает ИИ для поиска пусковых установок
@@ -170,3 +201,12 @@ section
 section
   a(href='https://habr.com/post/395525/').
     DARPA вкладывает $2B в развитие следующего поколения AI
+
+section
+  a(href='https://www.extremetech.com/extreme/271725-mit-neural-network-accelerates-mri-image-processing-by-1000-times').
+    Дата-майнинг выявил скрытые закономерности в развитии музыки
+
+section
+  a(href='http://cur.at/89XC04T?m=web').
+    Гугл разрабатывает платформу для автоматического построения
+    AI - AutoML
