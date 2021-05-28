@@ -1,3 +1,3 @@
 # Generative video
 
-https://ailove-lab.github.io/pres/generative-video
+https://aitech-lab.github.io/pres/generative-video

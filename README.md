@@ -1,4 +1,4 @@
-# ailove lab
+# aitech lab
 
-https://ailove-lab.github.io/
+https://aitech-lab.github.io/
 

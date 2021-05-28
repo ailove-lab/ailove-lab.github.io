@@ -1,4 +1,4 @@
 # Machine Learning
 
-https://ailove-lab.github.io/ml/
+https://aitech-lab.github.io/ml/
 
