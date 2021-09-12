@@ -1,0 +1,67 @@
+section
+
+  section
+    h2 Автоматизация 
+    video(src='img/automat.mp4' autoplay loop)
+  
+  section
+    h3 Внутренние инструменты
+    ul
+      +li Снежинка
+      +li Скриншотер
+      +li Еженидельный компет
+      +li Перфоманс калькулятор
+      +li Кластеризация
+
+  section
+      h3 Снежинка
+      p Сбор исторических данных по поисковым запросам
+      ul
+        +li Агрегирует абсолютные исторические данные по заданным ключевым словам для wordstat
+        +li Строит на их базе выгрузку из similarweb, относительный сплит domain/engine/paid/organic  
+        +li Расчитывает абсолютные значения для указанного сплита
+  section: img(src="img/snowflake_01.png")
+  section(data-background-video="img/snowflake.mp4" data-background-size="contain" )
+      
+  section
+      h3 Еженидельный компет
+      p Агрегация данных по конкурентным группам клиента
+      ul
+          +li Осуществляет регулярную выгрузку данных из similarweb
+          +li Интерполирует недостающие временные интервалы для мобильного трафика
+          +li Формирует выгрузку для дальнейшей обработки в BI
+  section(data-background-video="img/compets.mp4" data-background-size="contain" )
+
+    
+  section
+      h3 Перфоманс калькулятор
+      ul
+          +li Осущесвляет расчет оптимального распределения бюджета между рекламными каналами
+          +li Подбирает каналы для наиболее эффективнного достижения заданных показателей
+          +li Расчитывает максимальную возможную прибыль для заданных канналов
+  section: img(src="img/planner.png")
+  section(data-background-video="img/planner_mwp.mp4" data-background-size="contain" )
+  section
+      h3 TODO
+      ul
+          +li Автоматическое построение таблицы эффективности канала по прогнозам площадок
+              
+    
+  section
+      h3 Скриншотер
+      p Автоматизация подготовки скриншот-отчетов
+      ul
+        +li Создает полный архив указанной веб страницы
+        +li Вносит в верстку необходимые правки
+        +li Делает скриншет
+  section(data-background-video="img/screenshoter-mvp.mp4" data-background-size="contain" )
+ 
+  section
+      h3 Кластеризация
+      p Кластеризация потребительской корзины
+      ul
+        +li Обработка ~ 15М покупок
+        +li Понижение размерности данных и кластеризация
+        +li Интерактивная визуализация полного датасета
+  section(data-background-video="img/farma.mp4" data-background-size="contain" )
+

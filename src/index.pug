@@ -5,16 +5,16 @@ doctype html
 head
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-  title Aitech.Lab | #{title}
+  title aitech-lab | #{title}
 
   link(rel='stylesheet' href='css/reset.css')
   link(rel='stylesheet' href='css/reveal.css')
-  link(rel='stylesheet' href='css/theme/lab.css')
+  link(rel='stylesheet' href='css/theme/aitarget.css')
   link(rel='stylesheet' href='fonts/RobotoSlab/stylesheet.css')
   link(rel='stylesheet' href='fonts/Roboto/stylesheet.css')
 
   // Theme used for syntax highlighting of code
-  link(rel='stylesheet' href='lib/css/monokai.css')
+  link(rel='stylesheet' href='css/monokai.css')
 
   // Printing and PDF exports
   script.
@@ -23,24 +23,43 @@ head
     link.type = 'text/css';
     link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
+  
+  script(src='js/tgs-player.js')
+
+#three(style="position:absolute; top:0; left:0;")
 
 .reveal
   .slides
     include presentation
-        
+
+
 script(src='js/reveal.js')
 script.
-  // More info about config & dependencies:
-  // - https://github.com/hakimel/reveal.js#configuration
-  // - https://github.com/hakimel/reveal.js#dependencies
-  Reveal.initialize({
-  dependencies: [
-      { src: 'plugin/markdown/marked.js' },
-      { src: 'plugin/markdown/markdown.js' },
-      { src: 'plugin/math/math.js', async: true },
-      { src: 'plugin/notes/notes.js', async: true },
-      { src: 'plugin/highlight/highlight.js', async: true }
-  ],
-  history: true,
-  });
-
+    var reveal = Reveal.initialize({
+        backgroundTransition: 'blend',
+        transition: 'concave',
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/math/math.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true }
+        ],
+        history: true,
+    });
+        
+    let iv = 0;
+    let ih = 0;
+    Reveal.on('slidechanged', e=> {
+        let dh = e.indexh-ih;
+        if(dh) dh = dh/Math.abs(dh);
+        let dv = e.indexv-iv;
+        if(dv) dv = dv/Math.abs(dv);
+        rotate_scene(dv, dh)
+        ih = e.indexh;
+        iv = e.indexv;
+    })
+      
+// script(type="module" src='js/background.js')
+script(type="module")
+    include:coffee-script identity/main.coffee

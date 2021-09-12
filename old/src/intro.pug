@@ -1,0 +1,25 @@
+// section(data-background-video="img/lab.mp4" data-background-video-loop data-background-size='contain')
+section
+  video(src="img/lab.mp4" autoplay loop)
+  h1 #{title}
+  h4 #{subtitle}
+  p: a(href="https://"+main_url) #{main_url}
+  // p 
+    a(href="/ml") ml
+    |&nbsp;|&nbsp;
+    a(href="/nlp") nlp
+    |&nbsp;|&nbsp;
+    a(href="/gc") gc
+
+section
+  video(src='img/magic.mp4' autoplay loop)
+  blockquote.
+    Любая достаточно развитая технология неотличима от магии.
+  small 3`й закон Кларка
+
+section
+  h2 Основные направления
+  ul
+    +li Генеративный и интеактивный контент
+    +li Обработка данных и машинное обучение
+    +li Автоматизация внутренних процессов

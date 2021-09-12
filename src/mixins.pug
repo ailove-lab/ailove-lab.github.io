@@ -2,6 +2,30 @@ mixin li
   li.fragment.fade-in-then-semi-out
     block
 
+mixin lp
+  li.fragment.fade-in-then-semi-out(style="color:#fcf66c;")
+    | +&nbsp;
+    block
+mixin lpp
+  li.fragment.fade-in-then-semi-out(style="color:#fcf66c;")
+    | ++&nbsp;
+    block
+
+mixin lm
+  li.fragment.fade-in-then-semi-out(style="color:#8720fb;")
+    | &#8211;&nbsp;
+    block
+
+mixin lmm
+  li.fragment.fade-in-then-semi-out(style="color:#8720fb;")
+    | &#8211;&#8211;&nbsp;
+    block
+
+mixin lg
+  li.fragment.fade-in-then-semi-out
+    | ~&nbsp;
+    block
+
 mixin p
   p.fragment.fade-in-then-semi-out
     block
