@@ -1,0 +1,265 @@
+<!DOCTYPE html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>aitech-lab | video-feed</title><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/reveal.css"><link rel="stylesheet" href="/css/theme/aitarget.css"><link rel="stylesheet" href="/fonts/RobotoSlab/stylesheet.css"><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css"><!-- Theme used for syntax highlighting of code--><link rel="stylesheet" href="/css/monokai.css"><!-- Printing and PDF exports--><script>var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script><script src="/js/tgs-player.js"></script></head><div id="three" style="position:absolute; top:0; left:0;"></div><div class="reveal"><div class="slides"><!-- section(data-background-video="img/lab.mp4" data-background-video-loop data-background-size='contain')--><section><h4>Сервис рекламного стриминга</h4><h1>video-feed</h1><h4>hackathon 2021</h4></section><!--section
+  h3 Технологии рекламного видео-продакшена
+  ul
+    +li Использование GPU в производстве видео
+    +li Рекламные live стримы
+    +li Рекламный video-feed для стримеров--><section> <section><h3> Две основные задачи<br>видео-продакшена</h3><h3 class="fragment fade-in-then-semi-out"> Подготовка шаблонов</h3><h3 class="fragment fade-in-then-semi-out"> Эффективный рендер видео</h3></section><section><h3>3 поколения рендер-ферм</h3></section><section> <h3>Blender</h3><img src="/img/blender-farm.png"></section><!--section 
+  h3 Blender
+  ul
+    +lp Гибкость
+    +lp Производительность
+    +lp Качество картинки
+    +lmm Подготовка шаблонов
+--><section> <h3>After Effects</h3><img src="/img/ae-farm.png"></section><!-- section 
+  h3 Adobe AE
+  ul
+    +lpp Качество картинки
+    +lp Подготовка шаблонов
+    +lg Производительность
+    +lmm Гибкость
+
+ section(data-background-video="img/video-hive.mp4" data-background-opacity="1.0") 
+
+--><section> <h3>JS / DOM</h3><img src="/img/web-farm.png"></section><!--section
+  h3 Web-view
+  ul
+    +lpp Производительность
+    +lp Гибкость
+    +lg Качество картинки
+    +lm Подготовка шаблонов
+
+section(data-background-video="/img/supa.mp4" data-background-opacity="1.0") 
+
+--><section> <h3>Lottie</h3><img src="/img/lottie-farm.png"></section><!--section
+  h3 Lottie
+  ul
+    +lpp Производительность
+    +lp Подготовка шаблонов
+    +lp Гибкость
+    +lg Качество картинки--></section><section><section> <h2>Lottie</h2></section><section><h5 style="margin:auto; width:50%;"><tgs-player autoplay loop mode="normal" src="/img/5.tgs"></tgs-player></h5></section><section><h3>AE / Lottie</h3><img src="/img/ae-lottie.png"></section><section><h3>Lottie / MP4</h3><img src="/img/lottie-mp4.png"></section><section><h3>Преимущества Lottie</h3><ul><li class="fragment fade-in-then-semi-out" style="color:#fcf66c;">+&nbsp;Открытый анимационный json формат</li><li class="fragment fade-in-then-semi-out" style="color:#fcf66c;">+&nbsp;Небольшой размер файлов</li><li class="fragment fade-in-then-semi-out" style="color:#fcf66c;">+&nbsp;Прямой экспорт анимаии из Adobe AE</li><li class="fragment fade-in-then-semi-out" style="color:#fcf66c;">+&nbsp;Поддерживается Google и Samsung</li><li class="fragment fade-in-then-semi-out" style="color:#fcf66c;">+&nbsp;Наличие плееров с поддержкои GPU</li></ul></section><section><h3>Ограничения</h3><ul><li class="fragment fade-in-then-semi-out">~&nbsp;Поддержка растровых спецэффектов</li><li class="fragment fade-in-then-semi-out">~&nbsp;Поддержка видео ассетов </li></ul></section><section> <h3>Применение</h3><ul><li class="fragment fade-in-then-semi-out">Эффективный рендер видео рекламы</li><li class="fragment fade-in-then-semi-out">Реклама на мобильных устройствах</li><li class="fragment fade-in-then-semi-out">Рекламные интеграции для стримеров</li><li class="fragment fade-in-then-semi-out">Интеграции для онлайн кинотеатров </li><li class="fragment fade-in-then-semi-out">Инструменты кастомизации рекламы </li></ul></section></section><section><section><h2>video-feed</h2></section><section> <h3>Сервис преобразования продуктового фидa<br>в видео-поток</h3></section><section><h3>video-feed</h3><img src="/img/video-feed_1.png"></section><section><h3>Обратная связь с площадкой</h3><img src="/img/video-feed_2.png"></section><!-- section
+  h3 Преимущества живого рекламного стрима
+  ul
+    +li Вовлечение аудитории за счет интерактивности
+    +li Реакция на действия аудитории, события площадки
+    +li Возможность персонификации--></section><section><section><h2>video-feed для стримеров</h2></section><section><h3>video-feed в OBS</h3><img src="/img/video-feed_3.png"></section><section data-background-video="/img/stream-demo.mp4" data-background-size="contain" data-background-opacity="1.0"> </section><!-- section
+  h3 О стриминге
+  ul
+    +li Суммарно в 2020 twitch собрал 1.2 млрд часов просмотров
+    +li С началом пандемии, многие рекламодатели и бренды ушли в индустрию стриминга
+    +li Из стран СНГ ежемесячно в эфир выходит боле 100 тысяч стримеров
+    +li Более 60% стримеров монетизирует свой эфир, большинство через специальные сервисы
+--><section><h3><a href="https://aidata.me/videofeed">Демонстрация инструмента</a></h3></section><section data-background-video="/img/screencast.mp4" data-background-size="contain" data-background-opacity="1.0"> </section><!-- section(data-background-video="https://www.youtube.com/watch?v=_ey36szLYsg")--><!-- section
+  h3 Варианты интерактива 
+  ul
+    +li Промокод за длительный просмотр контента
+    +li Скидки за переходы / регистрации
+    +li Голосование за скидку на категорию товаров--></section><section><section><h2>Что дальше?</h2></section><section><h3>Планы</h3><ul><li class="fragment fade-in-then-semi-out">Изучение ограничений формата, проработка экспорта, поддержка видео-ассетов</li><li class="fragment fade-in-then-semi-out">Разработка онлайн инструментов для редактирования шаблонов </li><li class="fragment fade-in-then-semi-out">Серверный GPU рендер, инструменты транскодинга</li></ul></section><!-- section
+  h3 Machine Learning
+  ul
+    +li Генерация синтетических датасетов
+    +li Авто-анимация статичных креативов
+    +li Авто-генерация креативов по фото товара/текст
+
+section
+  h3 Вопросы?
+--><section><h3>Команда</h3><ul><li>Павел Голик - backend python / django</li><li>Павел Холод - frontend / Angular</li><li>Дмитрий Лунин - ML / python / js</li><li>Сергей Евдокимов - Дизайн </li><li>Владимир Серегин - R&D</li></ul></section></section><section><h4></h4><h4><a href="https://aitech-lab.github.io">https://aitech-lab.github.io</a></h4><h4><a href="https://aidata.me/videofeed">https://aidata.me/videofeed</a></h4></section></div></div><script src="/js/reveal.js"></script><script>var reveal = Reveal.initialize({
+    backgroundTransition: 'blend',
+    transition: 'concave',
+    dependencies: [
+        { src: '/plugin/markdown/marked.js' },
+        { src: '/plugin/markdown/markdown.js' },
+        { src: '/plugin/math/math.js', async: true },
+        { src: '/plugin/notes/notes.js', async: true },
+        { src: '/plugin/highlight/highlight.js', async: true }
+    ],
+    history: true,
+});
+    
+let iv = 0;
+let ih = 0;
+Reveal.on('slidechanged', e=> {
+    let dh = e.indexh-ih;
+    if(dh) dh = dh/Math.abs(dh);
+    let dv = e.indexv-iv;
+    if(dv) dv = dv/Math.abs(dv);
+    rotate_scene(dv, dh)
+    ih = e.indexh;
+    iv = e.indexv;
+})
+  </script><!-- script(type="module" src='js/background.js')--><script type="module">
+/*
+transition = ->
+
+    offset = current * particlesTotal * 3
+    duration = 20000
+
+    for i in [0..particlesTotal]
+      object = objects[ i ];
+      new TWEEN.Tween( object.position )
+        .to( {
+          x: positions[ j*3 ],
+          y: positions[ j*3 + 1 ],
+          z: positions[ j*3 + 2 ]
+        }, Math.random() * duration + duration )
+        .easing( TWEEN.Easing.Exponential.InOut )
+        .start();
+
+    new TWEEN.Tween( this )
+      .to( {}, duration * 3 )
+      .onComplete( transition )
+      .start();
+
+    current = ( current + 1 ) % 4;
+*/
+var SpriteMulti, animate, camera, controls, current, group, init, objects, onWindowResize, particlesTotal, positions, renderer, scene;
+
+import * as THREE from '/js/three.module.js';
+
+import {
+  TWEEN
+} from '/js/jsm/libs/tween.module.min.js';
+
+// import { CSS3DRenderer, CSS3DSprite } from '/js/jsm/renderers/CSS3DRenderer.js'
+// import { WebGLRenderer } from '/js/jsm/renderers/WebGLRenderer.js'
+group = camera = scene = renderer = controls = void 0;
+
+particlesTotal = 64;
+
+positions = [];
+
+objects = [];
+
+current = 0;
+
+SpriteMulti = class SpriteMulti extends THREE.Sprite {
+  constructor(material) {
+    var _geometry, float32Array, interleavedBuffer, s, x, y;
+    super(material);
+    this.type = 'Sprite';
+    _geometry = new THREE.BufferGeometry();
+    s = 1.0 / 8.0;
+    x = Math.random() * 8 | 0;
+    y = Math.random() * 8 | 0;
+    float32Array = new Float32Array([-0.5, -0.5, 0, (x + 0) * s, (y + 0) * s, 0.5, -0.5, 0, (x + 1) * s, (y + 0) * s, 0.5, 0.5, 0, (x + 1) * s, (y + 1) * s, -0.5, 0.5, 0, (x + 0) * s, (y + 1) * s]);
+    interleavedBuffer = new THREE.InterleavedBuffer(float32Array, 5);
+    _geometry.setIndex([0, 1, 2, 0, 2, 3]);
+    _geometry.setAttribute('position', new THREE.InterleavedBufferAttribute(interleavedBuffer, 3, 0, false));
+    _geometry.setAttribute('uv', new THREE.InterleavedBufferAttribute(interleavedBuffer, 2, 3, false));
+    this.geometry = _geometry;
+    this.material = material;
+    this.center = new THREE.Vector2(0.5, 0.5);
+  }
+
+};
+
+init = function() {
+  var i, image, j, k, l, line, line_geom, line_mat, m, map, material, points, ref, samples, spline, sprite, ss, ts, x, y, z;
+  console.log("Init");
+  camera = window.camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 200, 5000);
+  camera.position.set(0, 0, 1000);
+  camera.lookAt(0, 0, 0);
+  scene = new THREE.Scene();
+  scene.fog = new THREE.Fog(0x111111, 1000, 2000);
+  // scene.fog = new THREE.FogExp2( 0x000000, 0.00008 )
+  group = new THREE.Group();
+  image = document.createElement('img');
+  map = new THREE.TextureLoader().load('/img/glyphs_128x128.png');
+  material = new THREE.SpriteMaterial({
+    map: map,
+    color: 0xFFFFFF
+  });
+  ss = 128;
+  ts = 128;
+  for (i = j = 0, ref = particlesTotal; (0 <= ref ? j <= ref : j >= ref); i = 0 <= ref ? ++j : --j) {
+    sprite = new SpriteMulti(material);
+    x = Math.random() - 0.5;
+    y = Math.random() - 0.5;
+    z = Math.random() - 0.5;
+    sprite.position.set(x, y, z);
+    sprite.position.normalize();
+    sprite.position.multiplyScalar(Math.random() * 250 + 750);
+    sprite.scale.set(64.0, 64.0, 1.0);
+    group.add(sprite);
+    objects.push(sprite);
+  }
+  line_mat = new THREE.LineBasicMaterial({
+    color: 0x3f3f3f
+  });
+  for (i = l = 0; l <= 4; i = ++l) {
+    // line_geom = new THREE.BufferGeometry()
+    points = [];
+    for (i = m = 0; m <= 4; i = ++m) {
+      k = Math.random() * particlesTotal | 0;
+      points.push(objects[k].position);
+    }
+    // line_geom.setAttribute 'position', new THREE.Float32BufferAttribute(points, 3)
+    spline = new THREE.CatmullRomCurve3(points);
+    samples = spline.getPoints(points.length * 15);
+    line_geom = new THREE.BufferGeometry().setFromPoints(samples);
+    line = new THREE.Line(line_geom, line_mat);
+    group.add(line);
+  }
+  scene.add(group);
+  renderer = new THREE.WebGLRenderer({
+    alpha: true
+  });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.getElementById('three').appendChild(renderer.domElement);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  return window.addEventListener('resize', onWindowResize);
+};
+
+onWindowResize = function() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  return renderer.setSize(window.innerWidth, window.innerHeight);
+};
+
+window.rotate_scene = function(x = 0, y = 0) {
+  var r, t1, t2, wx, wy;
+  r = {
+    v: 0.0
+  };
+  wx = new THREE.Vector3(1.0, 0.0, 0.0);
+  wy = new THREE.Vector3(0.0, 1.0, 0.0);
+  t1 = new TWEEN.Tween(r).to({
+    v: 0.05
+  // .easing( TWEEN.Easing.Exponential.InOut )
+  }, 500).onUpdate((o) => {
+    group.rotateOnWorldAxis(wx, x * o.v);
+    return group.rotateOnWorldAxis(wy, y * o.v);
+  });
+  t2 = new TWEEN.Tween(r).to({
+    v: 0.0
+  // .easing( TWEEN.Easing.Exponential.InOut )
+  }, 500).onUpdate((o) => {
+    group.rotateOnWorldAxis(wx, x * o.v);
+    return group.rotateOnWorldAxis(wy, y * o.v);
+  });
+  t1.chain(t2);
+  return t1.start();
+};
+
+animate = function() {
+  requestAnimationFrame(animate);
+  TWEEN.update();
+  // controls.update();
+  // const time = performance.now();
+  // for ( let i = 0, l = objects.length; i < l; i ++ ) {
+  //     const object = objects[ i ];
+  //     const scale = Math.sin( ( Math.floor( object.position.x ) + time ) * 0.0002 ) * 0.3 + 1;
+  //     object.scale.set( scale, scale, scale );
+  // }
+  return renderer.render(scene, camera);
+};
+
+init();
+
+animate();
+</script>
