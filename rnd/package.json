@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "coffeescript": "^2.5.1",
+    "jstransformer-coffee-script": "^0.0.2"
+  }
+}
